@@ -1,0 +1,41 @@
+{
+  "name": "oculi",
+  "version": "1.0.0",
+  "description": "",
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "source": "src/index.ts",
+  "main": "./lib/index.cjs",
+  "umd:main": "lib/index.umd.js",
+  "module": "./lib/index.module.js",
+  "unpkg": "./lib/index.umd.js",
+  "types": "./lib/index.d.ts",
+  "exports": {
+    "require": "./lib/index.cjs",
+    "import": "./lib/index.module.js",
+    "default": "./lib/index.module.js"
+  },
+  "files": [
+    "lib"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "prepare": "npm run build",
+    "build": "microbundle",
+    "dev": "microbundle watch",
+    "test": "jest"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "jest": "^27.1.1",
+    "microbundle": "^0.13.3",
+    "ts-jest": "^27.0.5",
+    "typescript": "^4.4.2"
+  },
+  "dependencies": {
+    "eta": "^1.12.3"
+  }
+}
